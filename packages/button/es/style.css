@@ -1,0 +1,8 @@
+.yududesign-button-shadow {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+.yududesign-button-shadow:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
