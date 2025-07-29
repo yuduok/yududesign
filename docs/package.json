@@ -1,0 +1,21 @@
+{
+  "name": "@yududesign/docs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "dumi dev",
+    "build": "dumi build",
+    "preview": "dumi preview"
+  },
+  "dependencies": {
+    "@yududesign/button": "workspace:*",
+    "antd": "^5.21.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "dumi": "^2.4.21",
+    "@types/react": "^18.3.17",
+    "@types/react-dom": "^18.3.1"
+  }
+}
