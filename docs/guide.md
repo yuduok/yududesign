@@ -1,3 +1,11 @@
+---
+title: 快速开始
+order: 1
+nav:
+  title: 指南
+  order: 1
+---
+
 # 快速开始
 
 ## 安装
@@ -18,7 +26,7 @@ pnpm add @yududesign/button
 
 ```tsx
 import React from 'react';
-import { Button } from '@yududesign/button';
+import Button from '@yududesign/button';
 
 const App = () => {
   return (
@@ -33,9 +41,4 @@ export default App;
 
 ## 按需加载
 
-为了减少打包体积，推荐按需加载组件：
-
-```tsx
-import Button from '@yududesign/button/es/button';
-import '@yududesign/button/es/button/style';
-```
+为了减少打包体积，推荐按需加载组件。

@@ -1,4 +1,5 @@
 import { defineConfig } from 'dumi';
+import path from 'path';
 
 export default defineConfig({
   outputPath: 'dist',
@@ -15,7 +16,7 @@ export default defineConfig({
     ],
   },
   resolve: {
-    docDirs: ['docs'],
+    docDirs: ['.'],
     atomDirs: [
       { type: 'component', dir: '../packages' },
     ],
@@ -27,6 +28,7 @@ export default defineConfig({
     { id: 'en-US', name: 'English' },
   ],
   alias: {
-    '@yududesign/button': '/Users/yudu/Documents/yududesign/packages/button/es',
+    '@yududesign/button': path.resolve(__dirname, '../packages/button/src'),
+    '@yududesign/button/style': path.resolve(__dirname, '../packages/button/src/style.css'),
   },
 });

@@ -15,7 +15,11 @@
       "Bash(git reset:*)",
       "Bash(git init:*)",
       "Bash(git add:*)",
-      "Bash(git commit -m \"feat: 初始化 YuduDesign 组件库项目\n\n- 基于 Next.js 和 pnpm workspace 的 monorepo 结构\n- 集成 dumi 作为文档生成工具\n- 实现 Button 组件，基于 Ant Design 进行二次开发\n- 支持中英文文档\n- 配置完整的 TypeScript 和构建环境\n\n🤖 Generated with [Claude Code](https://claude.ai/code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\")"
+      "Bash(git commit -m \"feat: 初始化 YuduDesign 组件库项目\n\n- 基于 Next.js 和 pnpm workspace 的 monorepo 结构\n- 集成 dumi 作为文档生成工具\n- 实现 Button 组件，基于 Ant Design 进行二次开发\n- 支持中英文文档\n- 配置完整的 TypeScript 和构建环境\n\n🤖 Generated with [Claude Code](https://claude.ai/code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\")",
+      "Bash(npm run dev:*)",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(pnpm docs:dev:*)",
+      "WebFetch(domain:localhost)"
     ],
     "deny": []
   }

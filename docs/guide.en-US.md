@@ -1,3 +1,11 @@
+---
+title: Getting Started
+order: 1
+nav:
+  title: Guide
+  order: 1
+---
+
 # Getting Started
 
 ## Installation
@@ -18,7 +26,7 @@ Import and use components in your project:
 
 ```tsx
 import React from 'react';
-import { Button } from '@yududesign/button';
+import Button from '@yududesign/button';
 
 const App = () => {
   return (
@@ -33,9 +41,4 @@ export default App;
 
 ## Tree Shaking
 
-For smaller bundle sizes, we recommend importing components on demand:
-
-```tsx
-import Button from '@yududesign/button/es/button';
-import '@yududesign/button/es/button/style';
-```
+For smaller bundle sizes, we recommend importing components on demand.

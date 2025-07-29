@@ -45,7 +45,7 @@ pnpm add @yududesign/button
 ## Usage
 
 ```tsx
-import { Button } from '@yududesign/button';
+import Button from '@yududesign/button';
 
 export default () => <Button type="primary">Hello YuduDesign</Button>;
 ```

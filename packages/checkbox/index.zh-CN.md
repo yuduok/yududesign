@@ -1,3 +1,13 @@
+---
+title: Checkbox 复选框
+nav:
+  title: 组件
+  path: /components
+group:
+  title: 通用
+  order: 2
+---
+
 # Button 按钮
 
 按钮用于开始一个即时操作。基于 Ant Design Button 组件进行增强。
@@ -25,11 +35,11 @@
 
 ### 基础使用
 
-<code src="./button/demo/basic.tsx">基础按钮</code>
+
 
 ### 带阴影效果
 
-<code src="./button/demo/shadow.tsx">阴影按钮</code>
+
 
 ## API
 
