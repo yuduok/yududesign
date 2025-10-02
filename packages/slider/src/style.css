@@ -1,0 +1,60 @@
+.yududesign-slider {
+  position: relative;
+}
+
+.yududesign-slider-animated .ant-slider-rail {
+  transition: all 0.3s ease;
+}
+
+.yududesign-slider-animated .ant-slider-track {
+  transition: all 0.3s ease;
+}
+
+.yududesign-slider-animated .ant-slider-handle {
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.yududesign-slider-animated .ant-slider-handle:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 0 6px rgba(24, 144, 255, 0.2);
+}
+
+.yududesign-slider-gradient .ant-slider-track {
+  background: linear-gradient(90deg, #1890ff 0%, #40a9ff 100%);
+}
+
+.yududesign-slider-success .ant-slider-track {
+  background-color: #52c41a;
+}
+
+.yududesign-slider-success.yududesign-slider-gradient .ant-slider-track {
+  background: linear-gradient(90deg, #52c41a 0%, #73d13d 100%);
+}
+
+.yududesign-slider-warning .ant-slider-track {
+  background-color: #faad14;
+}
+
+.yududesign-slider-warning.yududesign-slider-gradient .ant-slider-track {
+  background: linear-gradient(90deg, #faad14 0%, #ffc53d 100%);
+}
+
+.yududesign-slider-danger .ant-slider-track {
+  background-color: #ff4d4f;
+}
+
+.yududesign-slider-danger.yududesign-slider-gradient .ant-slider-track {
+  background: linear-gradient(90deg, #ff4d4f 0%, #ff7875 100%);
+}
+
+.yududesign-slider-value {
+  position: absolute;
+  top: -30px;
+  right: 0;
+  background: #262626;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}

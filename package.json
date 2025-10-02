@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "workspaces": [
+    "packages",
     "packages/*",
     "docs"
   ],
@@ -12,7 +13,12 @@
     "start": "next start",
     "lint": "next lint",
     "docs:dev": "cd docs && pnpm dev",
-    "docs:build": "cd docs && pnpm build"
+    "docs:build": "cd docs && pnpm build",
+    "build:components": "cd packages && pnpm build",
+    "build:all": "pnpm build:components && pnpm docs:build",
+    "dev:components": "cd packages && pnpm dev",
+    "clean": "cd packages && rm -rf dist && pnpm -r --filter='@yududesign/*' exec rm -rf lib es dist",
+    "install:all": "pnpm install"
   },
   "dependencies": {
     "react": "19.1.0",

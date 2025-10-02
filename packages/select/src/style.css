@@ -1,0 +1,30 @@
+.yududesign-select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.yududesign-select-count {
+  position: absolute;
+  right: 0;
+  top: -20px;
+  font-size: 12px;
+  color: #999;
+}
+
+.yududesign-select-tagged .ant-select-selection-item {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #667eea;
+  color: white;
+}
+
+.yududesign-select-border-animation.ant-select:not(.ant-select-disabled):hover .ant-select-selector,
+.yududesign-select-border-animation.ant-select-focused .ant-select-selector {
+  border-color: #40a9ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.yududesign-select-border-animation .ant-select-selector {
+  transition: all 0.3s ease;
+}

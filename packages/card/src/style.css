@@ -1,0 +1,47 @@
+.yududesign-card-hoverable.ant-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.yududesign-card-hoverable.ant-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.yududesign-card-gradient-border.ant-card {
+  position: relative;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(135deg, #667eea 0%, #764ba2 100%) border-box;
+  border: 2px solid transparent;
+}
+
+.yududesign-card-shadow-small.ant-card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.yududesign-card-shadow-medium.ant-card {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.yududesign-card-shadow-large.ant-card {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.yududesign-card-collapsible .ant-card-head {
+  cursor: pointer;
+}
+
+.yududesign-card-collapse-icon {
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.3s ease;
+  font-size: 12px;
+}
+
+.yududesign-card-collapsed .yududesign-card-collapse-icon {
+  transform: rotate(180deg);
+}
+
+.yududesign-card-collapsed .ant-card-body {
+  display: none;
+}

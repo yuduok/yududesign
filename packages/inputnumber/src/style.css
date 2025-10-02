@@ -1,0 +1,40 @@
+.yududesign-inputnumber {
+  transition: all 0.3s ease;
+}
+
+.yududesign-inputnumber-animated {
+  position: relative;
+}
+
+.yududesign-inputnumber-animated:hover {
+  border-color: #40a9ff;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(24, 144, 255, 0.15);
+}
+
+.yududesign-inputnumber-focused {
+  border-color: #40a9ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.yududesign-inputnumber-separator .ant-input-number-input {
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  letter-spacing: 0.5px;
+}
+
+.yududesign-inputnumber .ant-input-number-handler-wrap {
+  transition: all 0.3s ease;
+}
+
+.yududesign-inputnumber:hover .ant-input-number-handler-wrap {
+  opacity: 1;
+}
+
+.yududesign-inputnumber .ant-input-number-handler {
+  transition: all 0.2s ease;
+}
+
+.yududesign-inputnumber .ant-input-number-handler:hover {
+  background-color: #f0f8ff;
+  border-color: #40a9ff;
+}

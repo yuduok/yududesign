@@ -1,0 +1,59 @@
+.yududesign-tag-gradient.ant-tag {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: transparent;
+  color: white;
+}
+
+.yududesign-tag-glow.ant-tag {
+  box-shadow: 0 0 10px rgba(24, 144, 255, 0.6);
+}
+
+.yududesign-tag-pulse.ant-tag {
+  animation: yududesign-tag-pulse 2s infinite;
+}
+
+@keyframes yududesign-tag-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.yududesign-tag-theme-success.ant-tag {
+  background: linear-gradient(135deg, #52c41a 0%, #73d13d 100%);
+  border-color: transparent;
+  color: white;
+}
+
+.yududesign-tag-theme-warning.ant-tag {
+  background: linear-gradient(135deg, #faad14 0%, #ffc53d 100%);
+  border-color: transparent;
+  color: white;
+}
+
+.yududesign-tag-theme-error.ant-tag {
+  background: linear-gradient(135deg, #ff4d4f 0%, #ff7875 100%);
+  border-color: transparent;
+  color: white;
+}
+
+.yududesign-tag-theme-info.ant-tag {
+  background: linear-gradient(135deg, #1890ff 0%, #40a9ff 100%);
+  border-color: transparent;
+  color: white;
+}
+
+.yududesign-tag-gradient.ant-tag:hover,
+.yududesign-tag-theme-success.ant-tag:hover,
+.yududesign-tag-theme-warning.ant-tag:hover,
+.yududesign-tag-theme-error.ant-tag:hover,
+.yududesign-tag-theme-info.ant-tag:hover {
+  opacity: 0.8;
+  transform: translateY(-1px);
+  transition: all 0.3s ease;
+}

@@ -1,0 +1,23 @@
+.yududesign-input-clear-enhanced .ant-input-clear-icon {
+  color: #ff4d4f;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.yududesign-input-clear-enhanced .ant-input-clear-icon:hover {
+  color: #ff7875;
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.yududesign-input-border-animation.ant-input:focus,
+.yududesign-input-border-animation.ant-input-focused {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.yududesign-input-border-animation.ant-input:hover {
+  border-color: #40a9ff;
+  transition: border-color 0.3s ease;
+}
