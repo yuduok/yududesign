@@ -1,5 +1,5 @@
 import React from 'react';
-import Tag from '@yududesign/tag';
+import { Tag } from '@yududesign/components';
 import { Space } from 'antd';
 
 export default () => (

@@ -35,17 +35,17 @@ features:
 ## 安装
 
 ```bash
-npm install @yududesign/button
+npm install @yududesign/components
 # or
-yarn add @yududesign/button
+yarn add @yududesign/components
 # or  
-pnpm add @yududesign/button
+pnpm add @yududesign/components
 ```
 
 ## 使用
 
 ```tsx
-import Button from '@yududesign/button';
+import { Button } from '@yududesign/components';
 
 export default () => <Button type="primary">Hello YuduDesign</Button>;
 ```

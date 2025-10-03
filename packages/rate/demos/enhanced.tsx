@@ -1,5 +1,5 @@
 import React from 'react';
-import Rate from '@yududesign/rate';
+import { Rate } from '@yududesign/components';
 import { Space } from 'antd';
 
 export default () => (

@@ -51,4 +51,3 @@ const Switch: React.FC<SwitchProps> = ({
 
 export { Switch };
 export default Switch;
-export type { SwitchProps };

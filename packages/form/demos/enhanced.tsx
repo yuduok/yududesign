@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from '@yududesign/form';
+import { Form } from '@yududesign/components';
 import { Input, Switch } from 'antd';
 
 export default () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Checkbox } from '@yududesign/checkbox';
+import { Checkbox } from '@yududesign/components';
 import { Space } from 'antd';
 
 export default () => {

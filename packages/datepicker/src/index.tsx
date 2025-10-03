@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { DatePicker as AntdDatePicker } from 'antd';
-import type { DatePickerProps as AntdDatePickerProps } from 'antd';
+import type { DatePickerProps as AntdDatePickerProps, RangePickerProps } from 'antd';
 import classNames from 'classnames';
 import dayjs from 'dayjs';
 import './style.css';
@@ -16,11 +16,13 @@ export interface DatePickerProps extends AntdDatePickerProps {
   animated?: boolean;
 }
 
-const { RangePicker } = AntdDatePicker;
+type DatePickerComponent = React.FC<DatePickerProps> & {
+  RangePicker: React.FC<RangePickerProps>;
+};
 
-const DatePicker: React.FC<DatePickerProps> & {
-  RangePicker: typeof RangePicker;
-} = ({ 
+const { RangePicker: AntdRangePicker } = AntdDatePicker;
+
+const DatePicker: DatePickerComponent = ({ 
   className, 
   quickSelect = false,
   showToday = true,
@@ -76,8 +78,7 @@ const DatePicker: React.FC<DatePickerProps> & {
   );
 };
 
-DatePicker.RangePicker = RangePicker;
+DatePicker.RangePicker = AntdRangePicker as React.FC<RangePickerProps>;
 
 export { DatePicker };
 export default DatePicker;
-export type { DatePickerProps };

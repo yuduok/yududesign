@@ -13,11 +13,11 @@ nav:
 Install the component library using npm, yarn or pnpm:
 
 ```bash
-npm install @yududesign/button
+npm install @yududesign/components
 # or
-yarn add @yududesign/button  
+yarn add @yududesign/components
 # or
-pnpm add @yududesign/button
+pnpm add @yududesign/components
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ Import and use components in your project:
 
 ```tsx
 import React from 'react';
-import Button from '@yududesign/button';
+import { Button } from '@yududesign/components';
 
 const App = () => {
   return (
@@ -39,6 +39,12 @@ const App = () => {
 export default App;
 ```
 
+**Note**: When using modern bundlers like Webpack 5+, Vite, styles will be loaded automatically. If styles don't work, manually import:
+
+```typescript
+import '@yududesign/components/style.css';
+```
+
 ## Tree Shaking
 
-For smaller bundle sizes, we recommend importing components on demand.
+The component library supports Tree Shaking. Unused code will be automatically removed by the bundler without additional configuration.

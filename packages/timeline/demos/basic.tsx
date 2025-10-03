@@ -1,5 +1,5 @@
 import React from 'react';
-import Timeline from '@yududesign/timeline';
+import { Timeline } from '@yududesign/components';
 
 export default () => (
   <Timeline>

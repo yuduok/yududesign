@@ -1,3 +1,20 @@
+// Import all component styles at once for auto side-effect
+import '../button/src/style.css';
+import '../checkbox/src/style.css';
+import '../cascader/src/style.css';
+import '../datepicker/src/style.css';
+import '../form/src/style.css';
+import '../input/src/style.css';
+import '../inputnumber/src/style.css';
+import '../radio/src/style.css';
+import '../rate/src/style.css';
+import '../select/src/style.css';
+import '../slider/src/style.css';
+import '../switch/src/style.css';
+import '../card/src/style.css';
+import '../tag/src/style.css';
+import '../timeline/src/style.css';
+
 // Re-export Button
 export { default as Button } from '../button/src';
 export type { ButtonProps } from '../button/src';

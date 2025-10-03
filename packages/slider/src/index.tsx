@@ -62,4 +62,3 @@ const Slider: React.FC<SliderProps> = ({
 
 export { Slider };
 export default Slider;
-export type { SliderProps };

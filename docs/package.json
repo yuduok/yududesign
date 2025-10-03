@@ -8,15 +8,7 @@
     "preview": "dumi preview"
   },
   "dependencies": {
-    "@yududesign/button": "workspace:*",
-    "@yududesign/checkbox": "workspace:*",
-    "@yududesign/datepicker": "workspace:*",
-    "@yududesign/form": "workspace:*",
-    "@yududesign/inputnumber": "workspace:*",
-    "@yududesign/radio": "workspace:*",
-    "@yududesign/rate": "workspace:*",
-    "@yududesign/slider": "workspace:*",
-    "@yududesign/timeline": "workspace:*",
+    "@yududesign/components": "workspace:*",
     "antd": "^5.21.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"

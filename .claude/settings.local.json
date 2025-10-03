@@ -21,7 +21,16 @@
       "Bash(pnpm docs:dev:*)",
       "WebFetch(domain:localhost)",
       "Bash(npm run build:*)",
-      "Bash(node:*)"
+      "Bash(node:*)",
+      "Bash(pnpm remove:*)",
+      "Bash(pnpm add:*)",
+      "Bash(for:*)",
+      "Bash(do sed -i '' '/^export type {/d' \"$file\")",
+      "Bash(done)",
+      "Bash(timeout 10 pnpm dev)",
+      "Bash(curl:*)",
+      "Bash(pkill:*)",
+      "Read(//private/tmp/**)"
     ],
     "deny": []
   }

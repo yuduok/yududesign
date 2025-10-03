@@ -121,4 +121,3 @@ Form.useWatch = AntdForm.useWatch;
 
 export { Form };
 export default Form;
-export type { FormProps };

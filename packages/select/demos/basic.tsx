@@ -1,5 +1,5 @@
 import React from 'react';
-import Select from '@yududesign/select';
+import { Select } from '@yududesign/components';
 import { Space } from 'antd';
 
 const { Option } = Select;

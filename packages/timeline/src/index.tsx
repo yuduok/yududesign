@@ -93,4 +93,3 @@ Timeline.Item = TimelineItem;
 
 export { Timeline };
 export default Timeline;
-export type { TimelineProps, EnhancedTimelineItemProps };

@@ -70,4 +70,3 @@ Card.Grid = AntdCard.Grid;
 
 export { Card };
 export default Card;
-export type { CardProps };

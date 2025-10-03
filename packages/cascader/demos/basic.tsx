@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cascader } from '@yududesign/cascader';
+import { Cascader } from '@yududesign/components';
 import { Space } from 'antd';
 
 const options = [

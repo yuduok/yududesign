@@ -2,14 +2,29 @@
   "name": "@yududesign/components",
   "version": "0.1.0",
   "main": "dist/index.js",
-  "module": "dist/index.esm.js",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./dist/index.css": "./dist/index.css",
+    "./style.css": "./dist/index.css"
+  },
+  "sideEffects": [
+    "dist/index.css",
+    "dist/index.js",
+    "dist/index.mjs",
+    "**/*.css"
+  ],
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "father build",
-    "dev": "father dev"
+    "build": "tsup",
+    "dev": "tsup --watch"
   },
   "peerDependencies": {
     "react": ">=16.9.0",
@@ -20,8 +35,9 @@
     "classnames": "^2.5.1"
   },
   "devDependencies": {
-    "father": "^4.5.0",
-    "@types/react": "^18.3.17",
-    "@types/react-dom": "^18.3.1"
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "tsup": "^8.5.0",
+    "typescript": "^5"
   }
 }

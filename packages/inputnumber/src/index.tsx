@@ -75,4 +75,3 @@ const InputNumber: React.FC<InputNumberProps> = ({
 
 export { InputNumber };
 export default InputNumber;
-export type { InputNumberProps };

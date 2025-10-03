@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from '@yududesign/card';
+import { Card } from '@yududesign/components';
 import { Avatar, Space } from 'antd';
 
 const { Meta } = Card;

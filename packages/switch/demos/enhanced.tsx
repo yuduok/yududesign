@@ -1,5 +1,5 @@
 import React from 'react';
-import Switch from '@yududesign/switch';
+import { Switch } from '@yududesign/components';
 import { Space } from 'antd';
 
 export default () => (

@@ -45,4 +45,3 @@ const Tag: React.FC<TagProps> = ({
 
 export { Tag };
 export default Tag;
-export type { TagProps };

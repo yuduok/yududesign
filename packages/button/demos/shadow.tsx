@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '@yududesign/button';
+import { Button } from '@yududesign/components';
 import { Space } from 'antd';
 
 export default () => (

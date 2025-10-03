@@ -1,5 +1,5 @@
 import React from 'react';
-import Slider from '@yududesign/slider';
+import { Slider } from '@yududesign/components';
 import { Space } from 'antd';
 
 export default () => (

@@ -82,4 +82,3 @@ const Rate: React.FC<RateProps> = ({
 
 export { Rate };
 export default Rate;
-export type { RateProps };

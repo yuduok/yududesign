@@ -42,4 +42,3 @@ const Cascader: React.FC<CascaderProps> = ({
 
 export { Cascader };
 export default Cascader;
-export type { CascaderProps };

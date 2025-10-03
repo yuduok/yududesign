@@ -1,5 +1,5 @@
 import React from 'react';
-import Input from '@yududesign/input';
+import { Input } from '@yududesign/components';
 import { Space } from 'antd';
 
 export default () => (

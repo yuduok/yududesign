@@ -1,5 +1,5 @@
 import React from 'react';
-import Radio from '@yududesign/radio';
+import { Radio } from '@yududesign/components';
 import { Space } from 'antd';
 
 export default () => (

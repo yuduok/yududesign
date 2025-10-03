@@ -73,4 +73,3 @@ Radio.Button = AntdRadio.Button;
 
 export { Radio };
 export default Radio;
-export type { RadioProps, RadioGroupEnhancedProps };

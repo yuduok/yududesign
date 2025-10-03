@@ -1,5 +1,5 @@
 import React from 'react';
-import DatePicker from '@yududesign/datepicker';
+import { DatePicker } from '@yududesign/components';
 import { Space } from 'antd';
 
 export default () => (

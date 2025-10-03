@@ -40,59 +40,88 @@ pnpm clean
 
 ```
 packages/dist/
-├── components.min.js     # UMD 格式（所有组件打包在一起）
-├── components.min.css    # 所有组件样式（合并压缩）
-└── test.html            # 测试页面（演示如何使用）
+├── index.js           # CommonJS 格式
+├── index.js.map       # CommonJS sourcemap
+├── index.mjs          # ES Module 格式
+├── index.mjs.map      # ESM sourcemap
+├── index.css          # 所有组件样式（合并）
+├── index.css.map      # CSS sourcemap
+└── index.d.ts         # TypeScript 类型声明
 ```
 
 ### 🧪 测试
 
-构建完成后，可以通过以下方式测试：
+在项目中使用：
 
-```bash
-# 在浏览器中打开测试页面
-open packages/dist/test.html
+```typescript
+// 最简单的方式（Webpack 5+/Vite）
+import { Button, Input } from '@yududesign/components';
+
+// 如果样式未自动加载，手动导入
+import '@yududesign/components/style.css';
 ```
 
-### 🌐 浏览器中使用
+### 🌐 在项目中使用
 
-```html
-<!-- 引入依赖 -->
-<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-<script src="https://unpkg.com/antd@5/dist/antd.min.js"></script>
-<script src="https://unpkg.com/classnames@2/index.js"></script>
+```typescript
+// NPM/YARN/PNPM 安装
+pnpm add @yududesign/components
 
-<!-- 引入样式和组件库 -->
-<link rel="stylesheet" href="./components.min.css">
-<script src="./components.min.js"></script>
+// 方式 1: 仅导入组件（推荐 - Webpack 5+/Vite 会自动加载样式）
+import { Button, Input, Card } from '@yududesign/components';
 
-<script>
-// 使用组件
-const { Button, Input, Card } = YuduDesign;
-// 使用方式与 React 组件相同
-</script>
+function App() {
+  return (
+    <div>
+      <Button type="primary" shadow>点击我</Button>
+      <Input placeholder="输入内容" />
+    </div>
+  );
+}
+
+// 方式 2: 手动导入样式（兼容旧版构建工具）
+import { Button, Input, Card } from '@yududesign/components';
+import '@yududesign/components/style.css';
 ```
+
+**✨ 自动样式加载**：由于配置了 `sideEffects`，使用 Webpack 5+、Vite 等现代打包工具时，样式会自动随组件加载，无需手动导入 CSS！
 
 ## 📦 使用方式
 
-### 统一导入（推荐）
+### 快速开始（推荐）
 
 ```typescript
-// 从统一入口导入所有组件
+// 仅导入组件，样式自动加载（Webpack 5+/Vite）
 import { Button, Input, Card, Tag } from '@yududesign/components';
 
-// 或者按需导入
-import { Button } from '@yududesign/components';
+// 开始使用
+<Button type="primary">按钮</Button>
 ```
 
-### 单独导入
+所有组件从 `@yududesign/components` 统一导入。使用 Webpack 5+、Vite 等现代打包工具时，CSS 会自动加载！
+
+### 样式导入选项
+
+根据你的打包工具选择合适的方式：
 
 ```typescript
-// 也可以单独导入每个组件
-import Button from '@yududesign/button';
-import Input from '@yududesign/input';
+// 选项 1: 自动加载（推荐 - Webpack 5+/Vite/Rollup）
+import { Button } from '@yududesign/components';
+// 样式会自动加载，无需额外导入 ✨
+
+// 选项 2: 使用简短路径手动导入
+import { Button } from '@yududesign/components';
+import '@yududesign/components/style.css';
+
+// 选项 3: 使用完整路径手动导入
+import { Button } from '@yududesign/components';
+import '@yududesign/components/dist/index.css';
 ```
+
+**工作原理**：
+- package.json 中配置了 `sideEffects: ["dist/index.js", "dist/index.mjs", "**/*.css"]`
+- 主入口文件 `src/index.tsx` 导入了所有组件样式
+- 现代打包工具会识别并自动注入样式到最终输出
 
 ## 📦 组件列表
 
@@ -137,22 +166,19 @@ import Input from '@yududesign/input';
 
 ```
 yududesign/
-├── packages/          # 组件包
-│   ├── button/        # 按钮组件
-│   ├── checkbox/      # 多选框组件
-│   ├── cascader/      # 级联选择组件
-│   ├── datepicker/    # 日期选择器组件
-│   ├── form/          # 表单组件
-│   ├── input/         # 输入框组件
-│   ├── inputnumber/   # 数字输入框组件
-│   ├── radio/         # 单选框组件
-│   ├── rate/          # 评分组件
-│   ├── select/        # 选择器组件
-│   ├── slider/        # 滑动输入条组件
-│   ├── switch/        # 开关组件
-│   ├── card/          # 卡片组件
-│   ├── tag/           # 标签组件
-│   └── timeline/      # 时间轴组件
+├── packages/          # 组件包（统一管理）
+│   ├── button/        # 按钮组件源码
+│   │   └── src/
+│   ├── checkbox/      # 多选框组件源码
+│   │   └── src/
+│   ├── cascader/      # 级联选择组件源码
+│   │   └── src/
+│   ├── ...            # 其他组件
+│   ├── src/           # 统一入口
+│   │   └── index.tsx  # 导出所有组件
+│   ├── dist/          # 构建产物
+│   ├── package.json   # 统一的包配置
+│   └── tsup.config.ts # 构建配置
 ├── docs/             # 文档站点
 ├── package.json      # 根配置
 └── README.md         # 项目说明
@@ -167,22 +193,33 @@ yududesign/
 
 ### 构建配置
 
-使用 [Father.js](https://github.com/umijs/father) 构建统一入口：
-- **统一导出**：`packages/index.tsx` 作为主入口
-- **ES Module**：`dist/index.esm.js`
+使用 [tsup](https://github.com/egoist/tsup) 作为构建工具：
+- **统一导出**：`packages/src/index.tsx` 作为主入口
+- **ES Module**：`dist/index.mjs`
 - **CommonJS**：`dist/index.js`
-- **UMD**：`dist/index.umd.js`
 - **TypeScript 声明文件**：`dist/index.d.ts`
+- **CSS 样式**：`dist/index.css`
+- **Source Maps**：生成 sourcemap 便于调试
 
 ### 构建产物
 
 ```
 packages/dist/
 ├── index.js          # CommonJS 格式
-├── index.esm.js      # ES Module 格式
-├── index.umd.js      # UMD 格式
-└── index.d.ts        # TypeScript 声明文件
+├── index.js.map      # CommonJS sourcemap
+├── index.mjs         # ES Module 格式
+├── index.mjs.map     # ESM sourcemap
+├── index.css         # 所有组件样式
+├── index.css.map     # CSS sourcemap
+└── index.d.ts        # TypeScript 类型声明
 ```
+
+### 架构特点
+
+- **统一包管理**：所有组件在 `@yududesign/components` 统一管理，无需单独的 package.json
+- **类型安全**：完整的 TypeScript 类型支持
+- **按需加载**：支持 Tree Shaking，自动剔除未使用的代码
+- **开发体验**：支持 watch 模式实时编译
 
 ## 📄 许可证
 
