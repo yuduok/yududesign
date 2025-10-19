@@ -10,10 +10,16 @@ export default defineConfig({
     socialLinks: {
       github: 'https://github.com/yourusername/yududesign',
     },
-    nav: [
-      { title: '指南', link: '/guide' },
-      { title: '组件', link: '/components' },
-    ],
+    nav: {
+      'zh-CN': [
+        { title: '指南', link: '/guide' },
+        { title: '组件', link: '/components' },
+      ],
+      'en-US': [
+        { title: 'Guide', link: '/en-US/guide' },
+        { title: 'Components', link: '/en-US/components' },
+      ],
+    },
   },
   resolve: {
     docDirs: ['.'],

@@ -2,22 +2,22 @@
 title: YuduDesign
 hero:
   title: YuduDesign
-  description: 基于 Ant Design 的二次开发组件库
+  description: A component library built on top of Ant Design
   actions:
-    - text: 快速开始
+    - text: Get Started
       link: /guide
-    - text: 组件
+    - text: Components
       link: /components/button
       type: primary
 features:
-  - title: 🚀 开箱即用
-    description: 简洁易用的 API 设计，快速上手
-  - title: 🎨 主题定制
-    description: 支持主题定制，满足多样化的设计需求
+  - title: 🚀 Ready to Use
+    description: Simple and easy-to-use API design for quick start
+  - title: 🎨 Theme Customization
+    description: Support theme customization to meet diverse design needs
   - title: 🔧 TypeScript
-    description: 完整的 TypeScript 类型定义，提供更好的开发体验
-  - title: 📦 按需加载
-    description: 支持 ES modules，可按需引入减少包体积
+    description: Complete TypeScript type definitions for better development experience
+  - title: 📦 On-Demand Loading
+    description: Support ES modules for on-demand import to reduce bundle size
 ---
 
 # YuduDesign
