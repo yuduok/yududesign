@@ -17,6 +17,9 @@
     "build:components": "cd packages && pnpm build",
     "build:all": "pnpm build:components && pnpm docs:build",
     "dev:components": "cd packages && pnpm dev",
+    "test": "cd packages && pnpm test",
+    "test:run": "cd packages && pnpm test:run",
+    "test:coverage": "cd packages && pnpm test:coverage",
     "clean": "cd packages && rm -rf dist && pnpm -r --filter='@yududesign/*' exec rm -rf lib es dist",
     "install:all": "pnpm install"
   },
