@@ -9,13 +9,16 @@ export interface ButtonProps extends AntdButtonProps {
   className?: string;
   /** 是否显示阴影效果 */
   shadow?: boolean;
+  /** 加载状态 */
+  loading?: boolean | { delay?: number };
 }
 
-const Button: React.FC<ButtonProps> = ({ 
-  className, 
-  shadow = false, 
-  children, 
-  ...rest 
+const Button: React.FC<ButtonProps> = ({
+  className,
+  shadow = false,
+  loading = false,
+  children,
+  ...rest
 }) => {
   const cls = classNames(
     className,
@@ -25,7 +28,7 @@ const Button: React.FC<ButtonProps> = ({
   );
 
   return (
-    <AntdButton className={cls} {...rest}>
+    <AntdButton className={cls} loading={loading} {...rest}>
       {children}
     </AntdButton>
   );
