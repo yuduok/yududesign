@@ -72,19 +72,12 @@ const TimelineItem: React.FC<EnhancedTimelineItemProps> = ({
   };
 
   return (
-    <AntdTimeline.Item 
+    <AntdTimeline.Item
       dot={getDotByStatus()}
       className={`yududesign-timeline-item-${status}`}
       {...rest}
     >
-      <div className="yududesign-timeline-content">
-        {time && (
-          <div className="yududesign-timeline-time">{time}</div>
-        )}
-        <div className="yududesign-timeline-description">
-          {children}
-        </div>
-      </div>
+      {children}
     </AntdTimeline.Item>
   );
 };
