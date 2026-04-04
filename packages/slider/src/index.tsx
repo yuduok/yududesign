@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Slider as AntdSlider } from 'antd';
-import type { SliderSingleProps, SliderRangeProps } from 'antd';
+import type { SliderSingleProps, SliderRangeProps } from 'antd/es/slider';
 import classNames from 'classnames';
 import './style.css';
 

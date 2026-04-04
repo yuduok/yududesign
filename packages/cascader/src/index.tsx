@@ -4,7 +4,7 @@ import type { CascaderProps as AntdCascaderProps } from 'antd';
 import classNames from 'classnames';
 import './style.css';
 
-export interface CascaderProps extends AntdCascaderProps {
+export interface CascaderProps extends Omit<AntdCascaderProps, 'multiple'> {
   /** 自定义样式类名 */
   className?: string;
   /** 是否显示清除按钮 */
@@ -31,8 +31,8 @@ const Cascader: React.FC<CascaderProps> = ({
   );
 
   return (
-    <AntdCascader 
-      className={cls} 
+    <AntdCascader
+      className={cls}
       allowClear={allowClear}
       showSearch={showSearch}
       {...rest}

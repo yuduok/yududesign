@@ -1,6 +1,8 @@
 import React from 'react';
 import { Card as AntdCard } from 'antd';
 import type { CardProps as AntdCardProps } from 'antd';
+import type { CardMetaProps } from 'antd/es/card/Meta';
+import type { CardGridProps } from 'antd/es/card/Grid';
 import classNames from 'classnames';
 import './style.css';
 
@@ -17,7 +19,12 @@ export interface CardProps extends AntdCardProps {
   collapsible?: boolean;
 }
 
-const Card: React.FC<CardProps> = ({ 
+interface CardComponent extends React.FC<CardProps> {
+  Meta: React.FC<CardMetaProps>;
+  Grid: React.FC<CardGridProps>;
+}
+
+const Card: CardComponent = ({ 
   className, 
   hoverable = false,
   gradientBorder = false,

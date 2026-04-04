@@ -39,20 +39,23 @@ const InputNumber: React.FC<InputNumberProps> = ({
     }
   );
 
-  const customFormatter = (value: string | number | undefined) => {
-    if (formatter) return formatter(value);
+  const customFormatter = (value: string | number | undefined, info: { userTyping: boolean; input: string; }) => {
+    if (formatter) return formatter(value, info);
     if (thousandSeparator && value) {
       return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, separator);
     }
-    return value?.toString();
+    return value?.toString() ?? '';
   };
 
-  const customParser = (value: string | undefined) => {
-    if (parser) return parser(value);
+  const customParser = (value: string | undefined): string => {
+    if (parser) {
+      const result = parser(value);
+      return String(result ?? '');
+    }
     if (thousandSeparator && value) {
       return value.replace(new RegExp(`\\${separator}`, 'g'), '');
     }
-    return value;
+    return value ?? '';
   };
 
   return (
