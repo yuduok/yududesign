@@ -1,0 +1,43 @@
+name: PR Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  pr-welcome:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.draft == false
+    steps:
+      - uses: actions/checkout@v4
+      - name: Comment on PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { repo, owner } = context.repo;
+            const prNumber = context.payload.pull_request.number;
+            const prTitle = context.payload.pull_request.title;
+            const prBody = context.payload.pull_request.body || '';
+            const author = context.payload.pull_request.user.login;
+
+            const welcomeComment = `
+              ## PR opened by @${author}
+
+              **${prTitle}**
+
+              ${prBody ? prBody : '_No description provided._'}
+
+              ---
+              :wave: Automated PR review pipeline is ready. A maintainer will review shortly.
+            `;
+
+            github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number: prNumber,
+              body: welcomeComment
+            });
