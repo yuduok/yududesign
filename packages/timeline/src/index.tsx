@@ -71,11 +71,13 @@ const TimelineItem: React.FC<EnhancedTimelineItemProps> = ({
     }
   };
 
+  const itemClassName = status !== 'default' ? `yududesign-timeline-item-${status}` : undefined;
+
   return (
     <AntdTimeline.Item
-      dot={getDotByStatus()}
-      className={`yududesign-timeline-item-${status}`}
       {...rest}
+      className={itemClassName || undefined}
+      dot={getDotByStatus()}
     >
       {children}
     </AntdTimeline.Item>

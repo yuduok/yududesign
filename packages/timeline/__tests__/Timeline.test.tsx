@@ -98,33 +98,31 @@ describe('Timeline', () => {
       expect(screen.getByText('Timeline content')).toBeInTheDocument();
     });
 
-    // Skipped: antd Timeline.Item className doesn't propagate to DOM.
-    // @see https://github.com/ant-design/ant-design/issues/TODO
-    it.skip('should apply success status dot to timeline item', () => {
-      render(
+    it('should apply success status dot to timeline item', () => {
+      const { container } = render(
         <Timeline>
           <Timeline.Item status="success">Completed</Timeline.Item>
         </Timeline>
       );
-      expect(document.querySelector('.yududesign-timeline-icon-success')).toBeInTheDocument();
+      expect(container.querySelector('.yududesign-timeline-icon-success')).toBeInTheDocument();
     });
 
-    it.skip('should apply process status dot to timeline item', () => {
-      render(
+    it('should apply process status dot to timeline item', () => {
+      const { container } = render(
         <Timeline>
           <Timeline.Item status="process">In Progress</Timeline.Item>
         </Timeline>
       );
-      expect(document.querySelector('.yududesign-timeline-icon-process')).toBeInTheDocument();
+      expect(container.querySelector('.yududesign-timeline-icon-process')).toBeInTheDocument();
     });
 
-    it.skip('should apply error status dot to timeline item', () => {
-      render(
+    it('should apply error status dot to timeline item', () => {
+      const { container } = render(
         <Timeline>
           <Timeline.Item status="error">Failed</Timeline.Item>
         </Timeline>
       );
-      expect(document.querySelector('.yududesign-timeline-icon-error')).toBeInTheDocument();
+      expect(container.querySelector('.yududesign-timeline-icon-error')).toBeInTheDocument();
     });
 
     it('should render with custom dot', () => {
