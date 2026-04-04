@@ -43,15 +43,13 @@ const Rate: React.FC<RateProps> = ({
   const getCharacter = () => {
     switch (colorTheme) {
       case 'heart':
-        return { character: <HeartOutlined /> };
+        return <HeartOutlined />;
       case 'emoji':
-        return { 
-          character: ({ index }: { index: number }) => {
-            return index <= (hoverValue || currentValue) ? <SmileOutlined /> : <FrownOutlined />;
-          }
+        return ({ index }: { index: number }): React.ReactElement => {
+          return index <= (hoverValue || currentValue) ? <SmileOutlined /> : <FrownOutlined />;
         };
       default:
-        return {};
+        return undefined;
     }
   };
 

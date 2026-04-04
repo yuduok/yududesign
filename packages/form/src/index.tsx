@@ -8,7 +8,7 @@ export interface FormProps extends AntdFormProps {
   /** 自定义样式类名 */
   className?: string;
   /** 是否启用自动保存 */
-  autoSave?: boolean;
+  autoSaveEnabled?: boolean;
   /** 自动保存间隔（毫秒） */
   autoSaveInterval?: number;
   /** 是否显示提交按钮 */
@@ -29,9 +29,9 @@ const Form: React.FC<FormProps> & {
   useForm: typeof AntdForm.useForm;
   useFormInstance: typeof AntdForm.useFormInstance;
   useWatch: typeof AntdForm.useWatch;
-} = ({ 
-  className, 
-  autoSave = false,
+} = ({
+  className,
+  autoSaveEnabled = false,
   autoSaveInterval = 3000,
   showSubmitButton = true,
   submitText = '提交',
@@ -39,7 +39,7 @@ const Form: React.FC<FormProps> & {
   onAutoSave,
   children,
   onFinish,
-  ...rest 
+  ...rest
 }) => {
   const [form] = AntdForm.useForm(rest.form);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -54,7 +54,7 @@ const Form: React.FC<FormProps> & {
 
   // 自动保存功能
   React.useEffect(() => {
-    if (!autoSave || !onAutoSave) return;
+    if (!autoSaveEnabled || !onAutoSave) return;
 
     const timer = setInterval(() => {
       const values = form.getFieldsValue();
@@ -65,7 +65,7 @@ const Form: React.FC<FormProps> & {
     }, autoSaveInterval);
 
     return () => clearInterval(timer);
-  }, [autoSave, autoSaveInterval, onAutoSave, form]);
+  }, [autoSaveEnabled, autoSaveInterval, onAutoSave, form]);
 
   const handleFinish = async (values: any) => {
     if (onFinish) {
@@ -88,7 +88,7 @@ const Form: React.FC<FormProps> & {
         onFinish={handleFinish}
         {...rest}
       >
-        {children}
+        {children as React.ReactNode}
         {showSubmitButton && (
           <AntdForm.Item>
             <Button 
@@ -102,7 +102,7 @@ const Form: React.FC<FormProps> & {
           </AntdForm.Item>
         )}
       </AntdForm>
-      {autoSave && (
+      {autoSaveEnabled && (
         <div className="yududesign-form-autosave-tip">
           自动保存已启用
         </div>

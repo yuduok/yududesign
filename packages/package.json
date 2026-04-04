@@ -33,6 +33,7 @@
     "react-dom": ">=16.9.0"
   },
   "dependencies": {
+    "@ant-design/icons": "^6.1.1",
     "antd": "^5.21.6",
     "classnames": "^2.5.1",
     "dayjs": "^1.11.13"
@@ -41,20 +42,16 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",
     "@testing-library/user-event": "^14.5.2",
-    "@types/react": "npm:@types/react@^19.0.0",
-    "@types/react-dom": "npm:@types/react-dom@^19.0.0",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
     "@vitejs/plugin-react": "^4.3.4",
     "@vitest/coverage-v8": "^2.1.8",
     "@vitest/ui": "^2.1.8",
     "jsdom": "^25.0.1",
+    "react": "^18",
+    "react-dom": "^18",
     "tsup": "^8.5.0",
     "typescript": "^5",
     "vitest": "^2.1.8"
-  },
-  "pnpm": {
-    "overrides": {
-      "@types/react": "npm:@types/react@^19.0.0",
-      "@types/react-dom": "npm:@types/react-dom@^19.0.0"
-    }
   }
 }
