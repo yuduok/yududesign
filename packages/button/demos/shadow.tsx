@@ -4,14 +4,17 @@ import { Space } from 'antd';
 
 export default () => (
   <Space wrap>
-    <Button type="primary" shadow>
-      Primary with Shadow
+    <Button type="primary" shadow="small">
+      Small Shadow
     </Button>
-    <Button shadow>
-      Default with Shadow
+    <Button shadow="medium">
+      Medium Shadow
     </Button>
-    <Button type="dashed" shadow>
-      Dashed with Shadow
+    <Button type="dashed" shadow="large">
+      Large Shadow
+    </Button>
+    <Button type="primary" shadow="large">
+      Primary Large
     </Button>
   </Space>
 );
