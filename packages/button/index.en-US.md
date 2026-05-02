@@ -37,14 +37,29 @@ And 4 other properties additionally.
 
 <code src="./demos/basic.tsx">Basic buttons</code>
 
-### With Shadow Effect
+### Shadow Effect
 
 <code src="./demos/shadow.tsx">Shadow buttons</code>
+
+### Gradient Background
+
+<code src="./demos/gradient.tsx">Gradient buttons</code>
+
+### Ripple Effect
+
+<code src="./demos/ripple.tsx">Ripple click</code>
+
+### Pulse Animation
+
+<code src="./demos/pulse.tsx">Pulse animation</code>
 
 ## API
 
 | Property | Description | Type | Default |
 | --- | --- | --- | --- |
-| shadow | Whether to show shadow effect | boolean | false |
+| shadow | Shadow size | `'none' \| 'small' \| 'medium' \| 'large'` | `'none'` |
+| gradient | Gradient background (CSS `background-image` value) | `string` | - |
+| ripple | Enable click ripple effect | `boolean` | `false` |
+| pulse | Enable pulse animation (for drawing attention) | `boolean` | `false` |
 
 For more APIs, please refer to [Ant Design Button](https://ant.design/components/button#api).

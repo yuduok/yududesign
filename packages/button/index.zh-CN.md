@@ -37,14 +37,29 @@ group:
 
 <code src="./demos/basic.tsx">基础按钮</code>
 
-### 带阴影效果
+### 阴影效果
 
 <code src="./demos/shadow.tsx">阴影按钮</code>
+
+### 渐变背景
+
+<code src="./demos/gradient.tsx">渐变按钮</code>
+
+### 点击涟漪
+
+<code src="./demos/ripple.tsx">涟漪效果</code>
+
+### 脉冲动画
+
+<code src="./demos/pulse.tsx">脉冲动画</code>
 
 ## API
 
 | 参数 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
-| shadow | 是否显示阴影效果 | boolean | false |
+| shadow | 阴影效果大小 | `'none' \| 'small' \| 'medium' \| 'large'` | `'none'` |
+| gradient | 渐变背景（CSS `background-image` 值） | `string` | - |
+| ripple | 是否启用点击涟漪效果 | `boolean` | `false` |
+| pulse | 是否启用脉冲动画（用于吸引注意） | `boolean` | `false` |
 
 更多 API 请参考 [Ant Design Button](https://ant.design/components/button-cn#api)。
